@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم مدیریت دانش‌آموزان</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- هدر سایت -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="فیزیک 20 نژاداسد" class="logo"> <!-- لوگو -->
+            <h1>فیزیک 20 نژاداسد</h1> <!-- نام سایت -->
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>افزودن دانش‌آموز</h1>
+        <form id="student-form" onsubmit="addStudent(); return false;">
+            <input type="text" id="name" placeholder="نام دانش‌آموز" required>
+            <input type="text" id="school" placeholder="مدرسه" required>
+            <input type="text" id="grade" placeholder="پایه" required>
+            <input type="text" id="class" placeholder="کلاس" required>
+            <input type="text" id="phone" placeholder="شماره تلفن (اختیاری)">
+            <button type="submit">افزودن دانش‌آموز</button>
+        </form>
+
+        <div class="accordion">نمایش توضیحات</div>
+        <div class="panel">
+            <p><strong>رتبه 1:</strong> 15 امتیاز</p>
+            <p><strong>رتبه 2:</strong> 14 امتیاز</p>
+            <p><strong>رتبه 3:</strong> 13 امتیاز</p>
+            <p><strong>رتبه 4:</strong> 12 امتیاز</p>
+            <p><strong>رتبه 5:</strong> 11 امتیاز</p>
+            <p><strong>رتبه 6:</strong> 10 امتیاز</p>
+            <p><strong>رتبه 7:</strong> 9 امتیاز</p>
+            <p><strong>رتبه 8:</strong> 8 امتیاز</p>
+            <p><strong>رتبه 9:</strong> 7 امتیاز</p>
+            <p><strong>رتبه 10:</strong> 6 امتیاز</p>
+            <p><strong>رتبه 11:</strong> 6 امتیاز</p>
+            <p><strong>رتبه 12:</strong> 5 امتیاز</p>
+            <p><strong>رتبه 13:</strong> 5 امتیاز</p>
+            <p><strong>رتبه 14:</strong> 4 امتیاز</p>
+            <p><strong>رتبه 15:</strong> 4 امتیاز</p>
+            <p><strong>رتبه 16:</strong> 3 امتیاز</p>
+            <p><strong>رتبه 17:</strong> 3 امتیاز</p>
+            <p><strong>رتبه 18:</strong> 2 امتیاز</p>
+            <p><strong>رتبه 19:</strong> 2 امتیاز</p>
+            <p><strong>رتبه 20:</strong> 1 امتیاز</p>
+            <p><strong>رتبه 21 تا 30:</strong> 1 امتیاز (برای رتبه‌های پایین‌تر، می‌توان به تدریج کاهش بیشتری اعمال کرد)</p>
+        </div>
+        
+        <h2>لیست دانش‌آموزان</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>نام</th>
+                    <th>مدرسه</th>
+                    <th>پایه</th>
+                    <th>کلاس</th>
+                    <th>شماره</th>
+                    <th>امتیاز</th>
+                    <th>عملیات</th>
+                </tr>
+            </thead>
+            <tbody id="students-table"></tbody>
+        </table>
+    </div>
+
+    <div id="delete-timer" style="display: none;">
+        <span>حذف دانش‌آموز در حال انجام است...</span>
+        <button onclick="cancelDelete()">برگشت</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
