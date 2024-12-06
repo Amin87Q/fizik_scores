@@ -1,0 +1,263 @@
+/* استایل عمومی */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa; /* پس‌زمینه روشن */
+    margin: 0;
+    padding: 0;
+}
+
+/* استایل هدر */
+.header {
+    background: linear-gradient(to right, #6a1b9a, #ff5722); /* گرادیانت از رنگ‌های بنفش و نارنجی */
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 100px; /* اندازه لوگو */
+    height: 100px;
+    border-radius: 50%; /* گرد شدن لوگو */
+    border: 3px solid white;
+}
+
+h1 {
+    font-size: 43px;
+    font-weight: bold;
+    margin: 0;
+    color: #fbc02d; /* رنگ زرد طلایی */
+}
+
+/* استایل فرم */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+form input, form button {
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* رنگ‌های ورودی‌ها */
+form input {
+    background-color: #f1f8e9; /* پس‌زمینه سبز ملایم */
+    border: 1px solid #b2dfdb; /* رنگ مرز سبز مایل به آبی */
+}
+
+form button {
+    background-color: #66bb6a; /* سبز نعنایی */
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #388e3c; /* سبز تیره‌تر */
+}
+
+/* استایل جدول */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* برای عملکرد بهتر در دستگاه‌های موبایل */
+}
+
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+table th, table td {
+    padding: 14px 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #009688; /* آبی فیروزه‌ای */
+    color: white;
+}
+
+table td {
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+/* دکمه‌های جدول */
+table td button {
+    background-color: #ff7043; /* نارنجی ملایم */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+table td button:hover {
+    background-color: #ff5722; /* نارنجی تیره */
+}
+
+table td button.delete-btn {
+    background-color: #f44336; /* قرمز */
+}
+
+table td button.delete-btn:hover {
+    background-color: #c62828; /* قرمز تیره */
+}
+
+/* استایل پیام تایمر حذف */
+#delete-timer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffeb3b; /* زرد روشن */
+    color: #333;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    z-index: 1000;
+}
+
+#delete-timer button {
+    background-color: #e64a19; /* قرمز تیره */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#delete-timer button:hover {
+    background-color: #d32f2f; /* قرمز بسیار تیره */
+}
+
+/* استایل برای دکمه توضیحات */
+.accordion {
+    background-color: #003366; /* آبی تیره */
+    color: white;
+    cursor: pointer;
+    padding: 8px 16px; /* اندازه کوچک‌تر دکمه */
+    width: auto; /* اندازه دکمه بستگی به متن داشته باشد */
+    text-align: center; /* متن دکمه در وسط */
+    border: none;
+    outline: none;
+    font-size: 14px; /* اندازه کوچک‌تر فونت */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.accordion:hover {
+    background-color: #002244; /* آبی تیره‌تر هنگام هاور */
+}
+
+/* استایل برای پنل توضیحات */
+.panel {
+    padding: 10px 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: right; /* راست‌چین کردن متن */
+}
+
+/* استایل برای نمایش لیست رتبه‌ها */
+.panel p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* استایل‌های واکنش‌گرا برای نمایش بهتر در گوشی‌ها */
+@media (max-width: 768px) {
+    /* هدر */
+    .header {
+        padding: 20px 0; /* افزایش فضای هدر در موبایل */
+    }
+
+    .logo-container {
+        flex-direction: column; /* نمایش لوگوها به صورت ستونی */
+    }
+
+    .logo {
+        width: 60px; /* کاهش اندازه لوگو */
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 32px; /* کاهش اندازه عنوان سایت */
+    }
+
+    /* فرم */
+    .container {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    form input, form button {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    /* جدول */
+    .table-responsive {
+        margin-bottom: 30px; /* اضافه کردن فضای زیر جدول */
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* دکمه‌ها */
+    .accordion {
+        font-size: 14px; /* اندازه دکمه توضیحات */
+        padding: 8px 12px; /* اندازه کوچک‌تر دکمه */
+    }
+
+    .panel {
+        font-size: 14px; /* کاهش اندازه متن */
+    }
+
+    #delete-timer {
+        width: 280px; /* کاهش عرض تایمر حذف */
+        font-size: 14px;
+    }
+
+    #delete-timer button {
+        padding: 4px 8px; /* کاهش اندازه دکمه برگشت */
+    }
+}
